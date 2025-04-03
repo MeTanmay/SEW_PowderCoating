@@ -35,13 +35,13 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <h3 className="text-2xl font-bold text-primary mb-4">Excellence in Powder Coating and Liquid Painting</h3>
-            <p className="text-gray-700 mb-4">
+            <p className="text-gray-700 text-justify mb-4">
               At Sanjeevani Engineering Works (SEW), we are dedicated to providing the highest quality powder coating services for industrial and commercial applications. Established in December 2024, we are committed to delivering exceptional results with cutting-edge technology and expert craftsmanship.
             </p>
-            <p className="text-gray-700 mb-4">
+            <p className="text-gray-700 text-justify mb-4">
               Our state-of-the-art facility is equipped with the latest technology and operated by skilled professionals who are committed to delivering exceptional results. We take pride in our attention to detail and our ability to meet the specific requirements of each client.
             </p>
-            <p className="text-gray-700 mb-6">
+            <p className="text-gray-700 text-justify mb-6">
               We use only premium quality powder materials that are environmentally friendly and provide superior durability and finish. Our commitment to quality and customer satisfaction has earned us a reputation for excellence in the industry.
             </p>
             
