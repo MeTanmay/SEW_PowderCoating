@@ -8,32 +8,29 @@ const Gallery = () => {
   const galleryImages = [
     {
       src: "/img42.png",
-      alt: "Powder coated metal parts"
+      alt: "11 Tank Pretreament Process",
+      title:"11 Tank Pretreament Process"
     },
     {
       src: "/img22.png",
-      alt: "Industrial coating process"
+      alt: "After Filter Unit",
+      title:"After Filter Unit"
     },
     {
       src: "/img12.png",
-      alt: "Finished powder coated products"
+      alt: "Power & Free Conveyor",
+      title:"Power & Free Conveyor"
     },
-    {
-      src: "/img55.png",
-      alt: "Powder coating equipment"
-    },
-    // {
-    //   src: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    //   alt: "Metal fabrication"
-    // },
     {
       src: "/img33.png",
-      alt: "Quality control inspection"
+      alt: "Powder Multi cyclone Unit",
+      title:"Powder Multi cyclone Unit"
     },
     {
-      src: "https://images.unsplash.com/photo-1581092787765-e31bd9f1cbfc?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-      alt: "Quality control inspection"
-    }
+      src: "/img7.png",
+      alt: "Effluent Treatment Plant",
+      title:"Effluent Treatment Plant"
+    },
   ]
 
   const containerVariants = {
@@ -71,7 +68,7 @@ const Gallery = () => {
           {galleryImages.map((image, index) => (
             <motion.div 
               key={index} 
-              className="gallery-item"
+              className="gallery-item relative group"
               variants={itemVariants}
             >
               <img 
@@ -79,6 +76,9 @@ const Gallery = () => {
                 alt={image.alt} 
                 className="w-full h-64 object-cover rounded-lg shadow-md"
               />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg opacity-100">
+                <h3 className="text-white text-xl font-bold">{image.title}</h3>
+              </div>
             </motion.div>
           ))}
         </motion.div>

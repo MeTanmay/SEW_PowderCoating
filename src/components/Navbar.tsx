@@ -47,14 +47,14 @@ const Navbar = () => {
             transition={{ duration: 0.5 }}
             className="flex items-center"
           >
-            <img 
-              src="/sew-logo.png" 
-              alt="SEW Logo" 
-              className="h-12 md:h-16 mr-3"
-            />
+          <img 
+            src="/sew-logo-4.png" 
+            alt="SEW Logo" 
+            className="h-16 md:h-18 mr-4" // Increased logo size
+          />
             <div className="flex flex-col">
-              <span className="text-white font-bold text-xl md:text-2xl">SEW</span>
-              <span className="text-white text-xs md:text-sm">Sanjeevani Engineering Works</span>
+              <span className="text-white font-bold text-2xl md:text-2xl">SEW</span>
+              <span className="text-white text-sm md:text-sm">Sanjeevani Engineering Works</span>
             </div>
           </motion.div>
 
@@ -65,7 +65,7 @@ const Navbar = () => {
             <Link to="about" smooth={true} duration={500} className="nav-link">About</Link>
             <Link to="gallery" smooth={true} duration={500} className="nav-link">Gallery</Link>
             <Link to="videos" smooth={true} duration={500} className="nav-link">Videos</Link>
-            <Link to="testimonials" smooth={true} duration={500} className="nav-link">Testimonials</Link>
+            {/* <Link to="testimonials" smooth={true} duration={500} className="nav-link">Testimonials</Link> */}
             <Link to="contact" smooth={true} duration={500} className="nav-link">Contact</Link>
           </nav>
 

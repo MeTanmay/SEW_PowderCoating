@@ -10,7 +10,7 @@ const About = () => {
       <div className="container mx-auto px-4" ref={ref}>
         <h2 className="section-title">About Us</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 items-center"> 
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -18,13 +18,13 @@ const About = () => {
           >
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                src="/about-us.png" 
                 alt="Powder coating facility" 
                 className="rounded-lg shadow-xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-secondary text-primary p-4 rounded-lg shadow-lg">
-                <p className="font-bold text-2xl">15+</p>
-                <p className="text-sm">Years of Experience</p>
+                <p className="font-bold text-2xl">100 %</p>
+                <p className="text-sm">Quality Assurance</p>
               </div>
             </div>
           </motion.div>

@@ -36,7 +36,7 @@ const Contact = () => {
               </div>
               <div className="contact-info-item">
                 <FaClock />
-                <span>Monday - Saturday: 9:00 AM - 6:00 PM</span>
+                <span>Sunday - Friday: 9:00 AM - 7:00 PM</span>
               </div>
             </div>
             

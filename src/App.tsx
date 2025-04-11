@@ -47,7 +47,7 @@ function App() {
       <Gallery />
       <VideoSection />
       <Clients />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contact />
       <Footer />
     </div>

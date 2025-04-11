@@ -45,7 +45,7 @@ const Hero = () => {
               className="absolute inset-0 bg-cover bg-center"
               style={{ 
                 backgroundImage: `url(${slide.image})`,
-                filter: 'brightness(0.6)'
+                filter: 'brightness(0.8)'
               }}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/70 to-transparent" />
