@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { FaPlay } from 'react-icons/fa'
 
@@ -6,16 +6,18 @@ const VideoSection = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
 
+  const [activeVideo, setActiveVideo] = useState<string | null>(null)
+
   const videos = [
     {
-      thumbnail: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      title: "Powder Coating Process",
-      videoId: "example1"
+      thumbnail: "/about-us.png",
+      title: "",
+      videoFile: "/video1.mp4" // Assuming this is in public/
     },
     {
       thumbnail: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      title: "Industrial Application Techniques",
-      videoId: "example2"
+      title: "",
+      videoFile: "/video2.mp4" // Reusing same file for example
     }
   ]
 
@@ -41,7 +43,7 @@ const VideoSection = () => {
   }
 
   return (
-    <section id="videos" className="py-20 bg-white">
+    <section id="videos" className="py-20 bg-white relative">
       <div className="container mx-auto px-4" ref={ref}>
         <h2 className="section-title">Watch Our Process</h2>
         
@@ -60,10 +62,13 @@ const VideoSection = () => {
               <img 
                 src={video.thumbnail} 
                 alt={video.title} 
-                className="w-full h-72 object-cover"
+                className="w-full h-80 object-cover "
               />
               <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                <button className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110">
+                <button 
+                  className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110"
+                  onClick={() => setActiveVideo(video.videoFile)}
+                >
                   <FaPlay className="text-white ml-1" />
                 </button>
               </div>
@@ -74,6 +79,21 @@ const VideoSection = () => {
           ))}
         </motion.div>
       </div>
+
+      {/* Video Modal */}
+      {activeVideo && (
+        <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center">
+          <div className="relative w-full max-w-3xl p-4">
+            <button
+              className="absolute top-2 right-2 text-white text-2xl"
+              onClick={() => setActiveVideo(null)}
+            >
+              &times;
+            </button>
+            <video src={activeVideo} controls autoPlay className="w-full h-auto rounded-lg shadow-lg" />
+          </div>
+        </div>
+      )}
     </section>
   )
 }

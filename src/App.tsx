@@ -27,7 +27,7 @@ function App() {
     return (
       <div className="flex items-center justify-center h-screen bg-primary">
         <motion.div
-          className="text-4xl font-bold text-secondary"
+          className="text-4xl font-bold text-center text-secondary"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
