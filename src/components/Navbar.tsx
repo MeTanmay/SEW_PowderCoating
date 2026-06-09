@@ -35,7 +35,7 @@ const Navbar = () => {
           </div>
           <div className="flex items-center">
             <FaEnvelope className="mr-2 text-secondary" />
-            <span>subhashankit73@gmail.com</span>
+            <span>sanjeevaniengineeringworks@gmail.com</span>
           </div>
         </div>
 

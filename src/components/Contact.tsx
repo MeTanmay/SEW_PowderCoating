@@ -30,9 +30,7 @@ const Contact = () => {
               </div>
               <div className="contact-info-item">
                 <FaEnvelope />
-                <span>sudhir_darshan@rediffmail.com /
-                subhashankit73@gmail.com
-                </span>
+                <span>sanjeevaniengineeringworks@gmail.com</span>
               </div>
               <div className="contact-info-item">
                 <FaClock />
